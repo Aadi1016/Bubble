@@ -1,0 +1,37 @@
+guid: 08958198-59b7-44bb-acb5-02979d100a9d
+table:
+  name: dim_client
+  db: ps_internal_primary
+  schema: amitbarnwal
+  db_table: dim_client
+  connection:
+    name: AnalystStudio_connection
+  columns:
+  - name: client_id
+    db_column_name: client_id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: client_name
+    db_column_name: client_name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: industry
+    db_column_name: industry
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: region
+    db_column_name: region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  dataset_id: ba0c51488099
+  properties:
+    sage_config:
+      is_sage_enabled: false

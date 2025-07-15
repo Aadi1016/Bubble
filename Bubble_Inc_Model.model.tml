@@ -1,0 +1,62 @@
+guid: 28f026c1-26ad-4c3a-952b-f82e46496ff5
+model:
+  name: Bubble_Inc_Model
+  model_tables:
+  - name: dim_client
+  - name: dim_subscription
+  - name: fact_sales
+    joins:
+    - with: dim_client
+      referencing_join: sales_client
+    - with: dim_subscription
+      referencing_join: sales_subscription
+  filters:
+  - column:
+    - Subscription Name
+    oper: in
+    values:
+    - org1
+  columns:
+  - name: Client Id
+    column_id: fact_sales::client_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sales Amount
+    column_id: fact_sales::sales_amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Sales Date
+    column_id: fact_sales::sales_date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Sales Id
+    column_id: fact_sales::sales_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Subscription Id
+    column_id: fact_sales::subscription_id
+    properties:
+      column_type: ATTRIBUTE
+  - name: Client Name
+    column_id: dim_client::client_name
+    properties:
+      column_type: ATTRIBUTE
+  - name: Industry
+    column_id: dim_client::industry
+    properties:
+      column_type: ATTRIBUTE
+  - name: Region
+    column_id: dim_client::region
+    properties:
+      column_type: ATTRIBUTE
+  - name: Subscription Name
+    column_id: dim_subscription::subscription_name
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: false

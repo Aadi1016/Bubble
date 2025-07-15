@@ -1,0 +1,40 @@
+object:
+- name: Bubble_Inc_Model
+  filename: Bubble_Inc_Model.model.tml
+  status:
+    status_code: OK
+  type: model
+  id: 28f026c1-26ad-4c3a-952b-f82e46496ff5
+  dependency:
+  - name: dim_client
+    filename: dim_client.table.tml
+  - name: fact_sales
+    filename: fact_sales.table.tml
+  - name: dim_subscription
+    filename: dim_subscription.table.tml
+  - name: AnalystStudio_connection
+    filename: AnalystStudio_connection.connection.tml
+- name: dim_client
+  filename: dim_client.table.tml
+  status:
+    status_code: OK
+  type: table
+  id: 08958198-59b7-44bb-acb5-02979d100a9d
+- name: fact_sales
+  filename: fact_sales.table.tml
+  status:
+    status_code: OK
+  type: table
+  id: 3f883116-513b-4264-9af1-5069fd6640f9
+- name: dim_subscription
+  filename: dim_subscription.table.tml
+  status:
+    status_code: OK
+  type: table
+  id: e81cf03e-4b9d-416c-850c-59f27a2b24d5
+- name: AnalystStudio_connection
+  filename: AnalystStudio_connection.connection.tml
+  status:
+    status_code: OK
+  type: connection
+  id: 4e8f540b-34df-4072-8180-148c91986335

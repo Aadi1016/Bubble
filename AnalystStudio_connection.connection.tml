@@ -1,0 +1,15 @@
+guid: 4e8f540b-34df-4072-8180-148c91986335
+connection:
+  name: AnalystStudio_connection
+  type: RDBMS_MODE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: host
+    value: as01-datawarehouse.as01.analyststudio.thoughtspot.cloud
+  - key: port
+    value: "8444"
+  - key: user
+    value: fb48d0ce57ab
+  - key: password
+    value: ""
+  description: ""

@@ -1,0 +1,56 @@
+guid: 3f883116-513b-4264-9af1-5069fd6640f9
+table:
+  name: fact_sales
+  db: ps_internal_primary
+  schema: amitbarnwal
+  db_table: fact_sales
+  connection:
+    name: AnalystStudio_connection
+  columns:
+  - name: sales_id
+    db_column_name: sales_id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: client_id
+    db_column_name: client_name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: subscription_id
+    db_column_name: subscription_id
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: sales_date
+    db_column_name: sales_date
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: sales_amount
+    db_column_name: sales_amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: sales_client
+    destination:
+      name: dim_client
+    "on": "[fact_sales::client_id] = [dim_client::client_id]"
+    type: INNER
+  - name: sales_subscription
+    destination:
+      name: dim_subscription
+    "on": "[fact_sales::subscription_id] = [dim_subscription::subscription_id]"
+    type: INNER
+  dataset_id: 37739a9210f0
+  properties:
+    sage_config:
+      is_sage_enabled: false
