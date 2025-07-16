@@ -21,13 +21,13 @@ jobs:
         node-version: 18
 
     - name: Install ThoughtSpot TML CLI
-      run: npm install -g @thoughtspot/tml
+      run: npm install -g @thoughtspot/tscli
 
     - name: Login and Import TMLs
       run: |
-        ts-setup login \
+        tscli login \
           --url https://ps-internal.thoughtspot.cloud \
           --username "${{ secrets.TS_USERNAME }}" \
           --password "${{ secrets.TS_PASSWORD }}"
 
-        ts-import .
+        tscli import --path .

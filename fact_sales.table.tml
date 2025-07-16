@@ -1,6 +1,6 @@
 guid: 3f883116-513b-4264-9af1-5069fd6640f9
 table:
-  name: fact_sales_1
+  name: fact_sales_2
   db: ps_internal_primary
   schema: amitbarnwal
   db_table: fact_sales
