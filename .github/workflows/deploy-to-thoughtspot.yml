@@ -15,19 +15,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - name: Deploy TML files to ThoughtSpot
+      uses: thoughtspot/thoughtspot-tools@main
       with:
-        node-version: 18
-
-    - name: Install ThoughtSpot TML CLI
-      run: npm install -g @thoughtspot/tscli
-
-    - name: Login and Import TMLs
-      run: |
-        tscli login \
-          --url https://ps-internal.thoughtspot.cloud \
-          --username "${{ secrets.TS_USERNAME }}" \
-          --password "${{ secrets.TS_PASSWORD }}"
-
-        tscli import --path .
+        host: https://ps-internal.thoughtspot.cloud
+        username: ${{ secrets.TS_USERNAME }}
+        password: ${{ secrets.TS_PASSWORD }}
+        import_path: .
