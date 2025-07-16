@@ -1,0 +1,33 @@
+name: Deploy TML to ThoughtSpot
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.tml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install ThoughtSpot TML CLI
+      run: npm install -g @thoughtspot/tml
+
+    - name: Login and Import TMLs
+      run: |
+        ts-setup login \
+          --url https://ps-internal.thoughtspot.cloud \
+          --username "${{ secrets.TS_USERNAME }}" \
+          --password "${{ secrets.TS_PASSWORD }}"
+
+        ts-import .
