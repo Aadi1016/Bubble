@@ -1,6 +1,6 @@
 guid: 08958198-59b7-44bb-acb5-02979d100a9d
 table:
-  name: dim_client_1
+  name: dim_client
   db: ps_internal_primary
   schema: amitbarnwal
   db_table: dim_client
