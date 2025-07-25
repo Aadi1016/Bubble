@@ -1,0 +1,56 @@
+{
+  "committer": {
+    "email": null,
+    "username": "Aadi1016"
+  },
+  "author": {
+    "email": "aditya.pokharkar@thoughtspot.com",
+    "username": "Aditya_Pokharkar"
+  },
+  "comment": "committed via cicd script",
+  "commit_time": "25/07/2025 13:41:59",
+  "commit_id": "9b61532b05fe5fe9bf432fa018251a09c397d5f9",
+  "branch": "commit_1",
+  "committed_files": [
+    {
+      "file_name": "answer/Total Sales per city.b7837f5b-5d2d-4ab9-a774-23c1b4dd7374.answer.tml",
+      "status_code": "WARNING",
+      "status_message": "File not committed. There is no change compared to previous commit."
+    },
+    {
+      "file_name": "liveboard/Sales Model - Testing.2afb3a14-f57e-4f4c-a4de-1c50d881a8b1.liveboard.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "answer/Total Totalproductcost by Firstname.6ed7bf58-1ccc-4067-b2f3-bf70a080e28c.answer.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "answer/testing - 001.aada8994-b198-4d00-a361-21264d53d413.answer.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "answer/test-001.4757eb39-cb62-4596-9589-48b29439d0c8.answer.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "worksheet/Sales Data Model.0f21baf9-c213-4d2f-ba77-b46ed5e9f18a.worksheet.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "table/FACTRESELLERSALES.85996e7d-96d8-42e8-a0b0-4465a9c6a95f.table.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    },
+    {
+      "file_name": "table/DIMEMPLOYEE.5262993d-d0d3-49db-81c3-43b0b6ec7fb7.table.tml",
+      "status_code": "OK",
+      "status_message": "DELETED"
+    }
+  ]
+}

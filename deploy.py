@@ -1,11 +1,12 @@
 import requests
 import json
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# Constants
+# Constant
 url = "https://ps-internal.thoughtspot.cloud/api/rest/2.0/vcs/git/commits/deploy"
-bearer_token = "QWRpdHlhUG9raGFya2FyOkpITm9hWEp2TVNSVFNFRXRNalUySkRVd01EQXdNQ1F2UVd4RVJXNVBOVmh3VUd4dVEwRktWVlp0VGtablBUMGtVSE5WUnpsUlFrZ3JLelJFU2s1R1JuTTNORVpLTkRsR09ERlhhRUYzUVhwd2IxcGlOM1pGYUhGWVVUMA=="
-
+bearer_token = os.getenv('AUTH_TOKEN_DEPLOY')
 
 headers = {
     "Accept": "application/json",
@@ -14,7 +15,7 @@ headers = {
 }
 
 payload = {
-    "branch_name": "deploy",
+    "branch_name": "deploy_1",
     "deploy_type": "DELTA",
     "deploy_policy": "ALL_OR_NONE",
     "comment": "This is deploying the changes to the orgs"
