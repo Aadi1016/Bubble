@@ -2,12 +2,14 @@ import csv
 import json
 import os
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 # Constants
 CSV_FILE = 'tmls.csv'
 COLUMN_NAME = 'tmls'
 API_URL = 'https://ps-internal.thoughtspot.cloud/api/rest/2.0/vcs/git/branches/commit'
-AUTH_TOKEN = "YWRpdHlhLnBva2hhcmthckB0aG91Z2h0c3BvdC5jb206SkhOb2FYSnZNU1JUU0VFdE1qVTJKRFV3TURBd01DUmliM2w2ZDNsTE1WQlRkazVaTjJwdWJHYzVPVmRCUFQwa04wNUllWFprVkc5MVVuWmxMM05NWlVGc1YyMVhUR3RHYlRKbWJUQXJReTlUVTIxdVRUUnVabmx2TkQw"
+AUTH_TOKEN = get.dotenv('AUTH_TOKEN_COMMIT')
 BRANCH_NAME = 'commit'
 RESPONSE_DIR = 'response'
 
