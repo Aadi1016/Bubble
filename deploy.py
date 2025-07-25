@@ -6,7 +6,7 @@ load_dotenv()
 
 # Constant
 url = "https://ps-internal.thoughtspot.cloud/api/rest/2.0/vcs/git/commits/deploy"
-bearer_token = get.dotenv('AUTH_TOKEN_DEPLOY')
+bearer_token = os.getenv('AUTH_TOKEN_DEPLOY')
 
 headers = {
     "Accept": "application/json",
@@ -15,7 +15,7 @@ headers = {
 }
 
 payload = {
-    "branch_name": "deploy",
+    "branch_name": "deploy_1",
     "deploy_type": "DELTA",
     "deploy_policy": "ALL_OR_NONE",
     "comment": "This is deploying the changes to the orgs"

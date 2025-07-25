@@ -9,8 +9,8 @@ load_dotenv()
 CSV_FILE = 'tmls.csv'
 COLUMN_NAME = 'tmls'
 API_URL = 'https://ps-internal.thoughtspot.cloud/api/rest/2.0/vcs/git/branches/commit'
-AUTH_TOKEN = get.dotenv('AUTH_TOKEN_COMMIT')
-BRANCH_NAME = 'commit'
+AUTH_TOKEN = os.getenv('AUTH_TOKEN_COMMIT')
+BRANCH_NAME = 'commit_1'
 RESPONSE_DIR = 'response'
 
 # Ensure the response directory exists
