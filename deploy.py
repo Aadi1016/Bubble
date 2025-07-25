@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# Constants
+# Constant
 url = "https://ps-internal.thoughtspot.cloud/api/rest/2.0/vcs/git/commits/deploy"
 bearer_token = get.dotenv('AUTH_TOKEN_DEPLOY')
 
